@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+:root {
+  --purple500: #281154;
+  --purple300: #270082;
+  --purple600: #1b0058;
+  --red600: #dc0000;
+  --body: #f9f6ff;
+  --max-width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  font-size: 1.6rem;
+}
+section {
+  scroll-margin: 5rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0px 2rem;
+}
+header {
+  background-color: var(--purple300);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  padding: 2rem 0;
+}
+.logo {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+nav ul li {
+  border-bottom: 02rem solid transparent;
+  transition: 0.2s ease-in;
+}
+nav ul li:hover {
+  border-bottom: 0.2rem solid white;
+  transition: 0.2s ease-in;
+}
+.hero-section {
+  background-image: url(./images/hero_image.png);
+  height: 100vh;
+  display: grid;
+  color: white;
+  place-items: center;
+  align-items: center;
+}
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section h1 {
+  font-size: 9.6rem;
+}
+.hero-section h3 {
+  font-size: 3.2rem;
+}
+.music-section {
+  padding-top: 5rem;
+  background-color: var(--purple500);
+}
+.music-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.ipad-iphn-img {
+  margin-top: -40rem;
+  position: relative;
+  top: 40rem;
+}
+.primary-btn {
+  background-color: var(--red600);
+  color: white;
+}
+.secondary-btn {
+  background-color: var(--purple300);
+  color: white;
+}
+.about-music {
+  padding-top: 50rem;
+  display: grid;
+  place-items: center;
+  gap: 5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.video-section {
+  background-image: url(./images/video.png);
+  min-height: 80rem;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+}
+
+.video-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  margin-top: -20rem;
+}
+.hero-section,
+.video-section {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gift-section {
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+  gap: 50rem;
+  scroll-margin: 12rem;
+}
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.upper-footer {
+  background-color: var(--purple600);
+  padding: 2rem;
+}
+.upper-footer .container {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+.upper-footer h4 {
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid white;
+  margin-bottom: 1rem;
+}
+.lower-footer {
+  background-color: var(--purple300);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .ipad-iphn-img img,
+  .mac-img img {
+    max-width: 100%;
+  }
+  .gift-card img {
+    width: 40rem;
+  }
+  .about-music {
+    padding-top: 30rem;
+  }
+  ipad-iphn-img {
+    margin-top: -20rem;
+    top: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+  .gift-section {
+    flex-direction: column;
+  }
+  .gift-section img {
+    width: 100%;
+  }
+  nav ul {
+    display: none;
+  }
+  .menu-bar i {
+    font-size: 2.4rem;
+  }
+  .upper-footer .container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .upper-footer .footer-links {
+    min-width: 20rem;
+  }
+}
+@media (min-width: 768px) {
+  .menu-bar {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  ipad-iphn-img {
+    margin-top: -10rem;
+    top: 10rem;
+  }
+  .about-music {
+    padding-top: 15rem;
+  }
+}
